@@ -442,17 +442,17 @@
     <script>
         function showSection(sectionId) {
             // Hide all sections
-            document.querySelectorAll('section').forEach(section => {
-                section.style.display = 'none';
+            document.querySelectorAll('section').forEach((section) => {
+                section.style.display = "none";
             });
             
             // Show the selected section
-            document.getElementById(sectionId).style.display = 'block';
+            document.getElementById(sectionId).style.display = "block";
             
             // Prevent default anchor behavior
             event.preventDefault();
         }
-
+    
         // Show the 'what' section by default
         document.addEventListener('DOMContentLoaded', () => {
             showSection('what');
