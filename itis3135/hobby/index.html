@@ -51,7 +51,7 @@
             display: none;
         }
     
-        section.active {
+        .active {
             display: block;
         }
     
@@ -126,12 +126,13 @@
         }
     
         input, textarea, select {
-            width: 100%;
+            width: calc(100% - 2px); /* Adjust for border */
             padding: 0.5rem;
             margin: 0.5rem 0;
             border: 1px solid #ddd;
             border-radius: 4px;
             background-color: white;
+            box-sizing: border-box; /* This will include padding and border in width calculation */
         }
     
         button {
@@ -441,13 +442,13 @@
 
     <script>
         function showSection(sectionId) {
-            // Hide all sections
+            // Remove 'active' class from all sections
             document.querySelectorAll('section').forEach((section) => {
-                section.style.display = "none";
+                section.classList.remove('active');
             });
             
-            // Show the selected section
-            document.getElementById(sectionId).style.display = "block";
+            // Add 'active' class to selected section
+            document.getElementById(sectionId).classList.add('active');
             
             // Prevent default anchor behavior
             event.preventDefault();
