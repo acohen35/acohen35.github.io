@@ -198,13 +198,13 @@
     <header>
         <h1>Photography Passion</h1>
         <nav>
-            <a href="#what" onclick="showSection('what')">Home</a> 📸
-            <a href="#who" onclick="showSection('who')">About</a> 📸
-            <a href="#when" onclick="showSection('when')">Schedule</a> 📸
-            <a href="#where" onclick="showSection('where')">Locations</a> 📸
-            <a href="#how" onclick="showSection('how')">Techniques</a> 📸
-            <a href="#why" onclick="showSection('why')">Purpose</a> 📸
-            <a href="#ai-prompts" onclick="showSection('ai-prompts')">AI Prompts</a>
+            <a href="#what" data-section="what">Home</a> 📸
+            <a href="#who" data-section="who">About</a> 📸
+            <a href="#when" data-section="when">Schedule</a> 📸
+            <a href="#where" data-section="where">Locations</a> 📸
+            <a href="#how" data-section="how">Techniques</a> 📸
+            <a href="#why" data-section="why">Purpose</a> 📸
+            <a href="#ai-prompts" data-section="ai-prompts">AI Prompts</a>
         </nav>
     </header>
 
@@ -442,21 +442,28 @@
 
     <script>
         function showSection(sectionId) {
-            // Remove 'active' class from all sections
+            // Hide all sections
             document.querySelectorAll('section').forEach((section) => {
-                section.classList.remove('active');
+                section.style.display = 'none';
             });
             
-            // Add 'active' class to selected section
-            document.getElementById(sectionId).classList.add('active');
-            
-            // Prevent default anchor behavior
-            event.preventDefault();
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
         }
     
-        // Show the 'what' section by default
+        // Add click handlers to all nav links
         document.addEventListener('DOMContentLoaded', () => {
+            // Show initial section
             showSection('what');
+    
+            // Add click handlers
+            document.querySelectorAll('nav a').forEach((link) => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const sectionId = link.getAttribute('data-section');
+                    showSection(sectionId);
+                });
+            });
         });
     </script>
 </body>
