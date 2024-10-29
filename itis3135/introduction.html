@@ -3,90 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aaron Cohen's Portfolio || ITIS3135</title>
+    <title>Aaron Cohen | Introduction</title>
     <style>
         body {
-            background-color: #2F4F4F;
-            color: white;
-            font-family: monospace;
-            text-align: center;
-            line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #f0f8ff; /* Light blue background like the reference */
         }
-        
-        nav {
-            margin: 20px 0;
+
+        header {
+            background-color: #8A9A5B; /* Sage Green */
+            padding: 1rem;
+            text-align: center;
         }
-        
-        nav a {
+
+        header nav a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
+            padding: 0 1rem;
         }
-        
-        .separator {
-            color: white;
-            margin: 0 5px;
+
+        header nav a:hover {
+            color: #DAA520; /* Midcentury Gold */
         }
-        
-        img {
+
+        main {
+            flex: 1;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .profile-image {
+            border: 3px solid #8A9A5B; /* Sage Green */
+            border-radius: 8px;
+            margin: 2rem auto;
             max-width: 300px;
             height: auto;
-            margin: 20px 0;
+            display: block;
         }
-        
-        .footer-links {
-            margin: 20px 0;
+
+        dl {
+            text-align: left;
+            max-width: 800px;
+            margin: 2rem auto;
         }
-        
-        .footer-links a {
+
+        dt {
+            color: #8A9A5B; /* Sage Green */
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        dd {
+            margin: 0.5rem 0 1rem 1rem;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: #8A9A5B; /* Sage Green */
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer h2 {
+            color: #DAA520; /* Midcentury Gold */
+            margin: 0;
+            padding: 1rem 0;
+        }
+
+        footer nav a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
+            padding: 0 0.5rem;
+        }
+
+        footer nav a:hover {
+            color: #DAA520; /* Midcentury Gold */
+        }
+
+        /* Ensure links in the footer stay on one line */
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
         }
     </style>
 </head>
 <body>
-    <h1>[Your Name]'s [Project Name] || ITIS 3135</h1>
-    
-    <nav>
-        <a href="home.html">Home</a>
-        <span class="separator">||</span>
-        <a href="introduction.html">Introduction</a>
-        <span class="separator">||</span>
-        <a href="contract.html">Contract</a>
-    </nav>
-    
-    <h2>Introduction</h2>
-    
-    <h3>Aaron Cohen || [Project Name]</h3>
-    
-    <img src="IntroductionPhoto.jpg" alt="Natural History museum in Raleigh">
-    <p>Aaron Cohen</p>
-    
-    <ul style="list-style: none; padding: 0;">
-        <li>Personal Background: [Your Background Info]</li>
-    </ul>
-    
-    <div class="footer-links">
-        <a href="#">charlotte.edu</a>
-        <span class="separator">||</span>
-        <a href="#">Github</a>
-        <span class="separator">||</span>
-        <a href="#">Github.io</a>
-        <span class="separator">||</span>
-        <a href="#">freeCodeCamp</a>
-        <span class="separator">||</span>
-        <a href="#">Codecademy</a>
-        <span class="separator">||</span>
-        <a href="#">LinkedIn</a>
-    </div>
-    
+    <header>
+        <nav>
+            <a href="index.html">Home</a> ||
+            <a href="./itis3135/introduction.html">Introduction</a> ||
+            <a href="./itis3135/contract.html">Contract</a> ||
+            <a href="./itis3135/about.html">About</a> ||
+            <a href="./itis3135/crappy.html">Crappy Page</a> ||
+            <a href="./itis3135/hobby.html">Hobby</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Aaron Cohen: Introduction</h1>
+        <h2>Aaron Cohen - UNCC Student</h2>
+
+        <img src="./images/photo2.jpg" alt="Profile photo placeholder" class="profile-image">
+
+        <dl>
+            <dt>Personal Background:</dt>
+            <dd>I'm a 28 year old charlotte resident, born in charlotte and raised in Mint Hill, NC.</dd>
+
+            <dt>Professional Background:</dt>
+            <dd>Spent the last 5 years working for Junk hauling companies and selling stuff I find of value on ebay or locally. I recently had an internship in Israel over the summer for two months. I primarily worked on a high fidelity prototype of a POS system for bodega's.</dd>
+
+            <dt>Academic Background:</dt>
+            <dd>Senior at UNCC, majoring in Computer Science with a concentration in Information Technology.</dd>
+
+            <dt>Courses I'm Taking & Why:</dt>
+            <dd>
+                <ul>
+                    <li>ITSC-3216 - I love cognition and its inner workings as well as the applications in juxtaposition to computer science.</li>
+                    <li>SYS-3200 - I need this class for graduation.</li>
+                    <li>SYS-3310 - I think it would greatly benefit me for future endeavors.</li>
+                    <li>ITIS-3155 - I wish to build SAAS applications in the near future.</li>
+                    <li>ITIS-3135 - I wish to build web applications in the near future.</li>
+                </ul>
+            </dd>
+
+            <dt>Interesting Fact:</dt>
+            <dd>I love Ecommerce and Macro-Economics, Money is the motivator but not the end all be all. I just really like systems.</dd>
+
+            <dt>Additional Information:</dt>
+            <dd>Primary Email: Aaron.cohen430@gmail.com, Phone: +1 980-579-6170</dd>
+
+            <dt>Expected Graduation:</dt>
+            <dd>Spring-2025</dd>
+        </dl>
+    </main>
+
     <footer>
-        <p>Page Built by [Your Enterprise Name] © 2024</p>
-        <img src="html5-valid.png" alt="Valid HTML5">
-        <img src="css-valid.png" alt="Valid CSS">
+        <h2>Useful Links</h2>
+        <nav class="footer-links">
+            <a href="https://webpages.charlotte.edu/acohen35/">CLT Web</a> |
+            <a href="https://github.com/acohen35">GitHub.com</a> |
+            <a href="https://www.codecademy.com/profiles/ACohen35">CC</a> |
+            <a href="https://acohen35.github.io/">GitHub.io</a> |
+            <a href="https://webpages.charlotte.edu/acohen35/itis3135/">ITIS3135</a> |
+            <a href="https://www.freecodecamp.org/ACohen35">FCC</a> |
+            <a href="https://www.linkedin.com/in/aaroncohen430/">LinkedIn</a>
+        </nav>
+        <p>Page Built By A16C Enterprises © 2024</p>
     </footer>
 </body>
 </html>
