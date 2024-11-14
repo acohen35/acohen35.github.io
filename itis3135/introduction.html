@@ -12,11 +12,19 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            background-color: #f0f8ff; /* Light blue background like the reference */
+            background-color: #f0f8ff;
+            box-sizing: border-box;
+        }
+
+        .profile-image,
+        header,
+        main,
+        footer {
+            box-sizing: border-box;
         }
 
         header {
-            background-color: #8A9A5B; /* Sage Green */
+            background-color: #8A9A5B;
             padding: 1rem;
             text-align: center;
         }
@@ -28,7 +36,7 @@
         }
 
         header nav a:hover {
-            color: #DAA520; /* Midcentury Gold */
+            color: #DAA520;
         }
 
         main {
@@ -45,7 +53,7 @@
         }
 
         .profile-image {
-            border: 3px solid #8A9A5B; /* Sage Green */
+            border: 3px solid #8A9A5B;
             border-radius: 8px;
             margin: 2rem auto;
             max-width: 300px;
@@ -60,7 +68,7 @@
         }
 
         dt {
-            color: #8A9A5B; /* Sage Green */
+            color: #8A9A5B;
             font-weight: bold;
             margin-top: 1rem;
         }
@@ -80,17 +88,25 @@
         }
 
         footer {
-            background-color: #8A9A5B; /* Sage Green */
+            background-color: #8A9A5B;
             color: white;
             padding: 1rem;
             text-align: center;
             margin-top: auto;
         }
 
-        footer h2 {
-            color: #DAA520; /* Midcentury Gold */
+        .footer-heading {
+            color: #DAA520;
             margin: 0;
             padding: 1rem 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
         }
 
         footer nav a {
@@ -100,16 +116,7 @@
         }
 
         footer nav a:hover {
-            color: #DAA520; /* Midcentury Gold */
-        }
-
-        /* Ensure links in the footer stay on one line */
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin: 1rem 0;
+            color: #DAA520;
         }
     </style>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
@@ -134,15 +141,15 @@
 
         <dl>
             <dt>Personal Background:</dt>
-            <dd>I'm a 28 year old charlotte resident, born in charlotte and raised in Mint Hill, NC.</dd>
+            <dd>I&apos;m a 28 year old charlotte resident, born in charlotte and raised in Mint Hill, NC.</dd>
 
             <dt>Professional Background:</dt>
-            <dd>Spent the last 5 years working for Junk hauling companies and selling stuff I find of value on ebay or locally. I recently had an internship in Israel over the summer for two months. I primarily worked on a high fidelity prototype of a POS system for bodega's.</dd>
+            <dd>Spent the last 5 years working for Junk hauling companies and selling stuff I find of value on ebay or locally. I recently had an internship in Israel over the summer for two months. I primarily worked on a high fidelity prototype of a POS system for bodega&apos;s.</dd>
 
             <dt>Academic Background:</dt>
             <dd>Senior at UNCC, majoring in Computer Science with a concentration in Information Technology.</dd>
 
-            <dt>Courses I'm Taking & Why:</dt>
+            <dt>Courses I&apos;m Taking &amp; Why:</dt>
             <dd>
                 <ul>
                     <li>ITSC-3216 - I love cognition and its inner workings as well as the applications in juxtaposition to computer science.</li>
@@ -165,7 +172,7 @@
     </main>
 
     <footer>
-        <h2>Useful Links</h2>
+        <h2 class="footer-heading">Useful Links</h2>
         <nav class="footer-links">
             <a href="https://webpages.charlotte.edu/acohen35/">CLT Web</a> |
             <a href="https://github.com/acohen35">GitHub.com</a> |
@@ -175,7 +182,7 @@
             <a href="https://www.freecodecamp.org/ACohen35">FCC</a> |
             <a href="https://www.linkedin.com/in/aaroncohen430/">LinkedIn</a>
         </nav>
-        <p>Page Built By A16C Enterprises © 2024</p>
+        <p>Page Built By A16C Enterprises &copy; 2024</p>
     </footer>
 </body>
 </html>
