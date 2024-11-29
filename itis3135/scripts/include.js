@@ -1,7 +1,14 @@
 var HTMLInclude = function() {
+    // Get base path - if we're in itis3135 folder or root
+    var basePath = location.pathname.includes('/itis3135/') ? '/itis3135/components/' : '/components/';
+    
     var elements = document.querySelectorAll("[data-include]");
     elements.forEach(function(element) {
         var url = element.getAttribute("data-include");
+        // If the URL doesn't start with the correct base path, prepend it
+        if (!url.startsWith(basePath)) {
+            url = basePath + url.split('/').pop();
+        }
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
