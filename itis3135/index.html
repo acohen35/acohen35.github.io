@@ -15,11 +15,11 @@
             background-color: #ffffff;
         }
         .profile-image,
-header,
-main,
-footer {
-    box-sizing: border-box;
-}
+        header,
+        main,
+        footer {
+            box-sizing: border-box;
+        }
 
         header {
             background-color: #8A9A5B;  /* Sage Green */
@@ -101,24 +101,15 @@ footer {
             padding: 0 0.5rem;
         }
     </style>
-	<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a> ||
-            <a href="introduction.html">Introduction</a> ||
-            <a href="contract.html">Contract</a> ||
-            <a href="about.html">About</a> ||
-            <a href="crappy.html">Crappy Page</a> ||
-            <a href="hobby/index.html">Hobby</a>
-        </nav>
-    </header>
+    <div data-include="components/header.html"></div>
 
     <main>
         <h1>Welcome to Aaron's Home Page</h1>
         
-        <img src="itis3135/images/IntroductionPhoto.jpg" alt="Profile photo placeholder" class="profile-image">
+        <img src="images/IntroductionPhoto.jpg" alt="Profile photo placeholder" class="profile-image">
         
         <p>Hello, and welcome to my website! My name is Aaron, and I'm a 
         Senior at UNCC, majoring in Computer Science with a 
@@ -128,19 +119,7 @@ footer {
         to showcase future projects and interests.</p>
     </main>
 
-    <footer>
-        <h2 class="footer-heading">Useful Links</h2>
-        <nav>
-            <a href="https://webpages.charlotte.edu/acohen35/">CLT Web</a> |
-            <a href="https://github.com/acohen35">GitHub.com</a> |
-            <a href="https://www.codecademy.com/profiles/ACohen35">CC</a> |
-            <a href="https://acohen35.github.io/">GitHub.io</a> |
-            <a href="https://webpages.charlotte.edu/acohen35/itis3135/">ITIS3135</a> |
-            <a href="https://www.freecodecamp.org/ACohen35">FCC</a> |
-            <a href="https://www.linkedin.com/in/aaroncohen430/">LinkedIn</a>
-        </nav>
-        <p>Page Built By A16C.Inc, Certified in <a href="https://www.freecodecamp.org/certification/ACohen35/javascript-algorithms-and-data-structures-v8">JS</a> and <a href="https://www.freecodecamp.org/certification/ACohen35/responsive-web-design">Responsive Web Design</a> &copy; 2024</p>
-    </footer>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/include.js"></script>
 </body>
 </html>
-
