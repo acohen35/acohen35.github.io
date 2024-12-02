@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron Cohen's First Scripts </title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/defaultscripts.js"></script>
+    <script src="scripts/include.js"></script>
+    <style>
+        .form-section {
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .form-section label {
+            display: block;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        .form-section input {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #8A9A5B;
+            border-radius: 4px;
+        }
+
+        .company-functions {
+            margin: 2rem 0;
+        }
+
+        button {
+            background-color: #8A9A5B;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+            color: #DAA520;
+        }
+    </style>
+</head>
+<body>
+    <div data-include="./components/header.html"></div>
+    
+    <main class="content">
+        <h1>First Scripts</h1>
+        <h2 id="currentDateTime"></h2>
+
+        <div class="form-section">
+            <h2>Welcome Form</h2>
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" required>
+            
+            <label for="userMood">How are you feeling?</label>
+            <input type="text" id="userMood" required>
+            
+            <button onclick="greetUser()">Submit</button>
+            
+            <h3 id="greetingOutput"></h3>
+        </div>
+
+        <div class="form-section">
+            <h2>Polygon Calculator</h2>
+            <label for="favoriteNumber">Enter your favorite number (0-10):</label>
+            <input type="number" id="favoriteNumber" min="0" max="10" required>
+            <button onclick="getPolygonName()">Get Polygon Name</button>
+        </div>
+
+        <div class="company-functions">
+            <h2>Camel Company Functions</h2>
+            <button onclick="camelGrunt()">Hear Camel Grunt</button>
+            <button onclick="calculateCamelHumps()">Calculate Camel Humps</button>
+            <button onclick="camelWaterTime()">Check Water Time</button>
+            <button onclick="countCamelSteps()">Count Camel Steps</button>
+        </div>
+    </main>
+
+    <div data-include="./components/footer.html"></div>
+
+    <script>
+        // Initialize date/time display on page load
+        displayDateTime();
+        // Update date/time every second
+        setInterval(displayDateTime, 1000);
+    </script>
+</body>
+</html>

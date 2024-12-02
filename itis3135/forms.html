@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron's Forms</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        form div {
+            margin: 1rem 0;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        select {
+            padding: 0.5rem;
+            border: 1px solid #8A9A5B;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        button {
+            background-color: #8A9A5B;
+            color: white;
+            border: none;
+            padding: 0.5rem 2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 1rem;
+        }
+
+        button:hover {
+            opacity: 0.9;
+            color: #DAA520;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+
+        input[type="radio"] + label,
+        input[type="checkbox"] + label {
+            display: inline;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div data-include="./components/header.html"></div>
+
+    <main class="content">
+        <h1>Job Application Form</h1>
+
+        <form action="#" method="post">
+            <div>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe" size="30">
+            </div>
+
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="123-456-7890" 
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="30">
+            </div>
+
+            <div>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="johndoe@example.com" size="30">
+            </div>
+
+            <div>
+                <p>Position Type:</p>
+                <div>
+                    <input type="radio" id="fulltime" name="position" value="fulltime" required>
+                    <label for="fulltime">Full-time</label>
+
+                    <input type="radio" id="parttime" name="position" value="parttime">
+                    <label for="parttime">Part-time</label>
+
+                    <input type="radio" id="contract" name="position" value="contract">
+                    <label for="contract">Contract</label>
+                </div>
+            </div>
+
+            <div>
+                <p>Skills (select all that apply):</p>
+                <div>
+                    <input type="checkbox" id="javascript" name="skills" value="javascript">
+                    <label for="javascript">JavaScript</label>
+
+                    <input type="checkbox" id="python" name="skills" value="python">
+                    <label for="python">Python</label>
+
+                    <input type="checkbox" id="java" name="skills" value="java">
+                    <label for="java">Java</label>
+
+                    <input type="checkbox" id="sql" name="skills" value="sql">
+                    <label for="sql">SQL</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="department">Preferred Department:</label>
+                <select id="department" name="department" required>
+                    <option value="">Select a department</option>
+                    <option value="development">Development</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="management">Management</option>
+                </select>
+            </div>
+
+            <div>
+                <button type="submit">Submit Application</button>
+                <button type="reset">Reset Form</button>
+            </div>
+        </form>
+    </main>
+
+    <div data-include="./components/footer.html"></div>
+    <script src="scripts/include.js"></script>
+</body>
+</html>

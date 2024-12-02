@@ -120,3 +120,9 @@ footer p a {
 footer p a:hover {
     color: #DAA520;
 }
+
+.validation-links img {
+    width: 88px;
+    height: 31px;
+    object-fit: contain;
+}

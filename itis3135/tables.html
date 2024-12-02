@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron's Tables</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        /* Table-specific styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #8A9A5B;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        .complex-table th[scope="row"] {
+            background-color: #8A9A5B;
+            color: white;
+        }
+
+        .total-row {
+            font-weight: bold;
+            background-color: #f0f0f0 !important;
+        }
+
+        .total-row:hover {
+            color: #DAA520;
+        }
+
+        figure {
+            margin: 2rem 0;
+        }
+
+        figcaption {
+            margin-top: 1rem;
+            font-style: italic;
+        }
+    </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div data-include="./components/header.html"></div>
+
+    <main class="content">
+        <h1>HTML Tables</h1>
+
+        <h2>My Tabular Data</h2>
+        <ol>
+            <li>John Smith - jsmith@gmail.com - 15</li>
+            <li>Sarah Johnson - sjohnson@yahoo.com - 8</li>
+            <li>Michael Chen - mchen@outlook.com - 12</li>
+            <li>Emily Davis - edavis@a16c.com - 5</li>
+            <li>Robert Wilson - rwilson@gmail.com - 20</li>
+            <li>Lisa Brown - lbrown@a16c.com - 3</li>
+            <li>David Martinez - dmartinez@yahoo.com - 10</li>
+            <li>Amanda Taylor - ataylor@a16c.com - 7</li>
+        </ol>
+
+        <h2>Employee Data in Simple Table</h2>
+        <table>
+            <tr>
+                <th id="name" scope="col">Name</th>
+                <th id="email" scope="col">Email</th>
+                <th id="years" scope="col">Years of Service</th>
+            </tr>
+            <tr>
+                <td headers="name">John Smith</td>
+                <td headers="email">jsmith@gmail.com</td>
+                <td headers="years">15</td>
+            </tr>
+            <tr>
+                <td headers="name">Sarah Johnson</td>
+                <td headers="email">sjohnson@yahoo.com</td>
+                <td headers="years">8</td>
+            </tr>
+            <tr>
+                <td headers="name">Michael Chen</td>
+                <td headers="email">mchen@outlook.com</td>
+                <td headers="years">12</td>
+            </tr>
+            <tr>
+                <td headers="name">Emily Davis</td>
+                <td headers="email">edavis@a16c.com</td>
+                <td headers="years">5</td>
+            </tr>
+            <tr>
+                <td headers="name">Robert Wilson</td>
+                <td headers="email">rwilson@gmail.com</td>
+                <td headers="years">20</td>
+            </tr>
+            <tr>
+                <td headers="name">Lisa Brown</td>
+                <td headers="email">lbrown@a16c.com</td>
+                <td headers="years">3</td>
+            </tr>
+            <tr>
+                <td headers="name">David Martinez</td>
+                <td headers="email">dmartinez@yahoo.com</td>
+                <td headers="years">10</td>
+            </tr>
+            <tr>
+                <td headers="name">Amanda Taylor</td>
+                <td headers="email">ataylor@a16c.com</td>
+                <td headers="years">7</td>
+            </tr>
+        </table>
+
+        <h2>Employee Data in Complex Table</h2>
+        <figure>
+            <table class="complex-table">
+                <caption>A16C Inc. Employee Information</caption>
+                <tr>
+                    <th id="dept" scope="col">Department</th>
+                    <th id="cname" scope="col">Name</th>
+                    <th id="cemail" scope="col">Email</th>
+                    <th id="cyears" scope="col">Years of Service</th>
+                    <th id="salary" scope="col">Monthly Salary</th>
+                </tr>
+                <tr>
+                    <th id="mgmt" scope="row" rowspan="2">Management</th>
+                    <td headers="dept mgmt cname">John Smith</td>
+                    <td headers="dept mgmt cemail">jsmith@gmail.com</td>
+                    <td headers="dept mgmt cyears">15</td>
+                    <td headers="dept mgmt salary">$8,500</td>
+                </tr>
+                <tr>
+                    <td headers="dept mgmt cname">Sarah Johnson</td>
+                    <td headers="dept mgmt cemail">sjohnson@yahoo.com</td>
+                    <td headers="dept mgmt cyears">8</td>
+                    <td headers="dept mgmt salary">$7,800</td>
+                </tr>
+                <tr>
+                    <th id="dev" scope="row" rowspan="3">Development</th>
+                    <td headers="dept dev cname">Michael Chen</td>
+                    <td headers="dept dev cemail">mchen@outlook.com</td>
+                    <td headers="dept dev cyears">12</td>
+                    <td headers="dept dev salary">$7,200</td>
+                </tr>
+                <tr>
+                    <td headers="dept dev cname">Emily Davis</td>
+                    <td headers="dept dev cemail">edavis@a16c.com</td>
+                    <td headers="dept dev cyears">5</td>
+                    <td headers="dept dev salary">$6,500</td>
+                </tr>
+                <tr>
+                    <td headers="dept dev cname">Robert Wilson</td>
+                    <td headers="dept dev cemail">rwilson@gmail.com</td>
+                    <td headers="dept dev cyears">20</td>
+                    <td headers="dept dev salary">$8,000</td>
+                </tr>
+                <tr>
+                    <th id="mkt" scope="row" rowspan="3">Marketing</th>
+                    <td headers="dept mkt cname">Lisa Brown</td>
+                    <td headers="dept mkt cemail">lbrown@a16c.com</td>
+                    <td headers="dept mkt cyears">3</td>
+                    <td headers="dept mkt salary">$5,500</td>
+                </tr>
+                <tr>
+                    <td headers="dept mkt cname">David Martinez</td>
+                    <td headers="dept mkt cemail">dmartinez@yahoo.com</td>
+                    <td headers="dept mkt cyears">10</td>
+                    <td headers="dept mkt salary">$6,800</td>
+                </tr>
+                <tr>
+                    <td headers="dept mkt cname">Amanda Taylor</td>
+                    <td headers="dept mkt cemail">ataylor@a16c.com</td>
+                    <td headers="dept mkt cyears">7</td>
+                    <td headers="dept mkt salary">$6,200</td>
+                </tr>
+                <tr class="total-row">
+                    <th scope="row" colspan="3">Total Years of Service</th>
+                    <td headers="cyears">80</td>
+                    <td headers="salary">$56,500</td>
+                </tr>
+            </table>
+            <figcaption>A16C Inc. Employee Information - Departmental Overview</figcaption>
+        </figure>
+    </main>
+
+    <div data-include="./components/footer.html"></div>
+    <script src="scripts/include.js"></script>
+</body>
+</html>

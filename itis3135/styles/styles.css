@@ -1,5 +1,5 @@
 body {
-    background-color: #f0f8ff;
+    background-color: #ffffff;
     text-align: center;
     font-family: Arial, sans-serif;
     font-size: 18px;
@@ -8,13 +8,14 @@ body {
 h1 {
     text-align: center;
     margin-top: 20px;
+    color: #8A9A5B;
 }
 
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border: 5px solid navy;
+    border: 5px solid #8A9A5B;
     border-radius: 10px;
     width: 200px;
 }
@@ -26,7 +27,7 @@ img {
 }
 
 nav {
-    background-color: navy;
+    background-color: #8A9A5B;
     padding: 10px;
 }
 
@@ -38,10 +39,11 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+    color: #DAA520;
 }
 
 footer {
-    background-color: navy;
+    background-color: #8A9A5B;
     color: white;
     padding: 10px;
     margin-top: 20px;
@@ -56,6 +58,7 @@ a {
 
 a:hover {
     text-decoration: underline;
+    color: #DAA520;
 }
 
 .separator {
