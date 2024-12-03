@@ -5,74 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aaron Cohen's Appealing Camel || ITIS 3135 || BYO Intro</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/survey.css">
     <script src="scripts/include.js"></script>
     <script src="scripts/survey.js" defer></script>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <style>
-        /* Form-specific styles that don't override the main theme */
-        .form-group {
-            margin: 1rem 0;
-            text-align: left;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-        
-        .form-group input[type="text"],
-        .form-group textarea {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #8A9A5B;
-            border-radius: 4px;
-        }
-        
-        .form-group textarea {
-            min-height: 100px;
-        }
-        
-        .course-entry {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .delete-course {
-            background-color: #ff4444;
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        
-        .form-buttons {
-            margin-top: 2rem;
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-        
-        input[type="submit"],
-        input[type="reset"],
-        button {
-            background-color: #8A9A5B;
-            color: white;
-            border: none;
-            padding: 0.5rem 2rem;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        
-        input[type="submit"]:hover,
-        input[type="reset"]:hover,
-        button:hover {
-            opacity: 0.9;
-            color: #DAA520;
-        }
-    </style>
 </head>
 <body>
     <div data-include="components/header.html"></div>
@@ -80,87 +16,87 @@
         <h1>BYO Introduction Page</h1>
         <h2>Time to BYO Intro page, please fill out the form below so we can create your own page.</h2>
 
-        <form id="introForm" onsubmit="return handleSubmit(event)">
+        <form id="intro-form">
             <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" value="Aaron Cohen" required>
+                <label for="name-input">Name:</label>
+                <input type="text" id="name-input" name="name" value="Aaron Cohen" required>
             </div>
 
             <div class="form-group">
-                <label for="mascot">Mascot:</label>
-                <input type="text" id="mascot" name="mascot" value="Appealing Camel" required>
+                <label for="mascot-input">Mascot:</label>
+                <input type="text" id="mascot-input" name="mascot" value="Appealing Camel" required>
             </div>
 
             <div class="form-group">
-                <label for="image">Image:</label>
-                <input type="file" id="image" name="image" accept=".jpg,.jpeg,.png" required>
+                <label for="image-input">Image:</label>
+                <input type="file" id="image-input" name="image" accept=".jpg,.jpeg,.png" required>
             </div>
 
             <div class="form-group">
-                <label for="imageCaption">Image Caption:</label>
-                <input type="text" id="imageCaption" name="imageCaption" value="Profile photo" required>
+                <label for="image-caption-input">Image Caption:</label>
+                <input type="text" id="image-caption-input" name="imageCaption" value="Profile photo" required>
             </div>
 
             <div class="form-group">
-                <label for="personalBackground">Personal Background:</label>
-                <textarea id="personalBackground" name="personalBackground" required>I'm a 28 year old charlotte resident, born in charlotte and raised in Mint Hill, NC.</textarea>
+                <label for="personal-background">Personal Background:</label>
+                <textarea id="personal-background" name="personalBackground" required>I'm a 28 year old charlotte resident, born in charlotte and raised in Mint Hill, NC.</textarea>
             </div>
 
             <div class="form-group">
-                <label for="professionalBackground">Professional Background:</label>
-                <textarea id="professionalBackground" name="professionalBackground" required>Spent the last 5 years working for Junk hauling companies and selling stuff I find of value on ebay or locally. I recently had an internship in Israel over the summer for two months. I primarily worked on a high fidelity prototype of a POS system for bodega's.</textarea>
+                <label for="professional-background">Professional Background:</label>
+                <textarea id="professional-background" name="professionalBackground" required>Spent the last 5 years working for Junk hauling companies and selling stuff I find of value on ebay or locally. I recently had an internship in Israel over the summer for two months. I primarily worked on a high fidelity prototype of a POS system for bodega's.</textarea>
             </div>
 
             <div class="form-group">
-                <label for="academicBackground">Academic Background:</label>
-                <textarea id="academicBackground" name="academicBackground" required>Senior at UNCC, majoring in Computer Science with a concentration in Information Technology.</textarea>
+                <label for="academic-background">Academic Background:</label>
+                <textarea id="academic-background" name="academicBackground" required>Senior at UNCC, majoring in Computer Science with a concentration in Information Technology.</textarea>
             </div>
 
             <div class="form-group">
-                <label for="webDevBackground">Background in Web Development:</label>
-                <textarea id="webDevBackground" name="webDevBackground" required>I wish to build web applications in the near future.</textarea>
+                <label for="webdev-background">Background in Web Development:</label>
+                <textarea id="webdev-background" name="webDevBackground" required>I wish to build web applications in the near future.</textarea>
             </div>
 
             <div class="form-group">
-                <label for="platform">Primary Computer Platform:</label>
-                <input type="text" id="platform" name="platform" value="Windows" required>
+                <label for="platform-input">Primary Computer Platform:</label>
+                <input type="text" id="platform-input" name="platform" value="Windows" required>
             </div>
 
             <div class="form-group">
                 <label>Courses Currently Taking:</label>
-                <div id="coursesContainer">
+                <div id="courses-container">
                     <div class="course-entry">
                         <input type="text" name="courses[]" value="ITSC-3216 - Cognitive Science" required>
-                        <button type="button" class="delete-course" onclick="deleteCourse(this)">Delete</button>
+                        <button type="button" class="delete-course">Delete</button>
                     </div>
                     <div class="course-entry">
                         <input type="text" name="courses[]" value="SYS-3200 - Systems Analysis and Design" required>
-                        <button type="button" class="delete-course" onclick="deleteCourse(this)">Delete</button>
+                        <button type="button" class="delete-course">Delete</button>
                     </div>
                     <div class="course-entry">
                         <input type="text" name="courses[]" value="SYS-3310 - Software Architecture and Design" required>
-                        <button type="button" class="delete-course" onclick="deleteCourse(this)">Delete</button>
+                        <button type="button" class="delete-course">Delete</button>
                     </div>
                     <div class="course-entry">
                         <input type="text" name="courses[]" value="ITIS-3155 - Software Engineering" required>
-                        <button type="button" class="delete-course" onclick="deleteCourse(this)">Delete</button>
+                        <button type="button" class="delete-course">Delete</button>
                     </div>
                     <div class="course-entry">
                         <input type="text" name="courses[]" value="ITIS-3135 - Web App Design and Development" required>
-                        <button type="button" class="delete-course" onclick="deleteCourse(this)">Delete</button>
+                        <button type="button" class="delete-course">Delete</button>
                     </div>
                 </div>
-                <button type="button" onclick="addCourse()">Add Course</button>
+                <button type="button" class="add-course-btn">Add Course</button>
             </div>
 
             <div class="form-group">
-                <label for="funnyThing">Funny Thing:</label>
-                <textarea id="funnyThing" name="funnyThing">I love Ecommerce and Macro-Economics, Money is the motivator but not the end all be all. I just really like systems.</textarea>
+                <label for="funny-thing">Funny Thing:</label>
+                <textarea id="funny-thing" name="funnyThing">I love Ecommerce and Macro-Economics, Money is the motivator but not the end all be all. I just really like systems.</textarea>
             </div>
 
             <div class="form-group">
-                <label for="anythingElse">Anything Else:</label>
-                <textarea id="anythingElse" name="anythingElse">Primary Email: Aaron.cohen430@gmail.com, Phone: +1 980-579-6170</textarea>
+                <label for="anything-else">Anything Else:</label>
+                <textarea id="anything-else" name="anythingElse">Primary Email: Aaron.cohen430@gmail.com, Phone: +1 980-579-6170</textarea>
             </div>
 
             <div class="form-group">
@@ -176,7 +112,7 @@
             </div>
         </form>
 
-        <div id="result" style="display: none;">
+        <div id="result">
             <!-- Results will be displayed here -->
         </div>
     </main>
