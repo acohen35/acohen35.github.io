@@ -5,8 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slideshow || ITIS 3135 || Aaron Cohen</title>
     <link rel="stylesheet" href="styles/default.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../components/include.js"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
         .slides {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background-color: #808000;
+            color: white;
+            border: 2px solid #C3A343;
+            margin: 20px;
+            border-radius: 8px;
+        }
+        .slide {
             display: none;
             text-align: center;
             padding: 20px;
@@ -66,18 +79,35 @@
             font-style: italic;
             margin: 20px 0;
         }
+        .signature {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            border-top: 2px solid #C3A343;
+            color: #808000;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
-    <div id="content">
-        <h2>Slideshow</h2>
-        <div class="slides-container">
-            <!-- Slides will be dynamically populated here -->
+    <div data-include="components/header.html"></div>
+    <main>
+        <div id="content">
+            <h2>Slideshow</h2>
+            <div class="slides-container">
+                <!-- Slides will be dynamically populated here -->
+            </div>
+            <div class="navigation">
+                <!-- Navigation buttons will be dynamically populated here -->
+            </div>
+            <div class="signature">
+                This is my code and i did not copy and paste someone elses.<br><br>
+                Signed,<br>
+                Aaron Cohen, 12/05/2024 14:36 EST
+            </div>
         </div>
-        <div class="navigation">
-            <!-- Navigation buttons will be dynamically populated here -->
-        </div>
-    </div>
+    </main>
+    <div data-include="components/footer.html"></div>
     <script src="scripts/slideshow.js"></script>
 </body>
 </html>

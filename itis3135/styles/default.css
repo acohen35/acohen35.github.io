@@ -40,6 +40,16 @@ main {
     text-align: center;
 }
 
+/* Add styling for all links in main content */
+main a {
+    color: #8A9A5B;
+    text-decoration: none;
+}
+
+main a:hover {
+    color: #DAA520;
+}
+
 h1, h2 {
     color: #333;
     margin-bottom: 1rem;
