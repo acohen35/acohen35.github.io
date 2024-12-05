@@ -1,23 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('intro-form');
-    form.addEventListener('submit', handleSubmit);
-
-    const addCourseButton = document.querySelector('.add-course-btn');
-    if (addCourseButton) {
-        addCourseButton.addEventListener('click', addCourse);
-    }
-
-    // Add event delegation for delete course buttons
-    const coursesContainer = document.getElementById('courses-container');
-    if (coursesContainer) {
-        coursesContainer.addEventListener('click', function(e) {
-            if (e.target.classList.contains('delete-course')) {
-                deleteCourse(e.target);
-            }
-        });
-    }
-});
-
+// Define functions first
 function handleSubmit(event) {
     event.preventDefault();
     
@@ -64,3 +45,24 @@ function deleteCourse(button) {
         courseEntry.remove();
     }
 }
+
+// Add event listeners after functions are defined
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('intro-form');
+    form.addEventListener('submit', handleSubmit);
+
+    const addCourseButton = document.querySelector('.add-course-btn');
+    if (addCourseButton) {
+        addCourseButton.addEventListener('click', addCourse);
+    }
+
+    // Add event delegation for delete course buttons
+    const coursesContainer = document.getElementById('courses-container');
+    if (coursesContainer) {
+        coursesContainer.addEventListener('click', function(e) {
+            if (e.target.classList.contains('delete-course')) {
+                deleteCourse(e.target);
+            }
+        });
+    }
+});
