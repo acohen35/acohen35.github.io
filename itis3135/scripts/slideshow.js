@@ -9,7 +9,7 @@ $(document).ready(function () {
         { letter: "C", item: "Cat", src: "images/C.jpg" },
         { letter: "O", item: "Orange", src: "images/OO.jpg" },
         { letter: "H", item: "Hat", src: "images/H.jpg" },
-        { letter: "E", item: "Engine", src: "images/E.jpg" },
+        { letter: "E", item: "Euler's-Disc", src: "images/E.jpg" },
         { letter: "N", item: "Nizoral", src: "images/NN.jpg" }
     ];
 
