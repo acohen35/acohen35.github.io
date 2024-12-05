@@ -7,7 +7,7 @@ $(document).ready(function () {
         { letter: "O", item: "Onion", src: "images/o.jpg" },
         { letter: "N", item: "Nozzle", src: "images/N.jpg" },
         { letter: "C", item: "Cat", src: "images/C.jpg" },
-        { letter: "O", item: "Orange", src: "images/OO.jpg" },
+        { letter: "O", item: "Orange", src: "images/oo.jpg" },
         { letter: "H", item: "Hat", src: "images/H.jpg" },
         { letter: "E", item: "Euler's-Disc", src: "images/E.jpg" },
         { letter: "N", item: "Nizoral", src: "images/NN.jpg" }
