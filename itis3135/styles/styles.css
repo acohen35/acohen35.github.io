@@ -21,6 +21,13 @@ img {
     width: 200px;
 }
 
+/* Exception for validation images */
+.validation-image {
+    border: none;
+    width: 31px;
+    margin: 0;
+}
+
 .content {
     max-width: 800px;
     margin: 20px auto;
@@ -64,4 +71,28 @@ a:hover {
 
 .separator {
     color: white;
+}
+
+/* New validation styles */
+.validation-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.validation-link {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;  /* Override the general a tag margin */
+}
+
+.footer-heading {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    margin-bottom: 10px;
 }
