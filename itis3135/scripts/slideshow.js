@@ -4,7 +4,7 @@ $(document).ready(function () {
         { letter: "A", item: "Action-figure", src: "images/AA.jpg" },
         { letter: "A", item: "Anubis", src: "images/A.jpg" },
         { letter: "R", item: "Remote", src: "images/R.jpg" },
-        { letter: "O", item: "Onion", src: "images/O.jpg" },
+        { letter: "O", item: "Onion", src: "images/o.jpg" },
         { letter: "N", item: "Nozzle", src: "images/N.jpg" },
         { letter: "C", item: "Cat", src: "images/C.jpg" },
         { letter: "O", item: "Orange", src: "images/OO.jpg" },
