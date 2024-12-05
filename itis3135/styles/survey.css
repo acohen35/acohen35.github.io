@@ -13,14 +13,13 @@
 .form-group textarea {
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #8A9A5B;
+    border: 2px solid #8A9A5B;
     border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .form-group textarea {
     min-height: 100px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    border: 2px solid #8A9A5B;
 }
 
 .course-entry {
