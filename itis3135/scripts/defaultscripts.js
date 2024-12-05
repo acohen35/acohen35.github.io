@@ -13,19 +13,19 @@ function displayDateTime() {
     const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
     
     const dateTimeString = `Today is ${formattedHours}:${formattedMinutes}${ampm} on ${days[now.getDay()]}, ${now.getDate()} ${months[now.getMonth()]}, ${now.getFullYear()}`;
-    document.getElementById('currentDateTime').textContent = dateTimeString;
+    document.getElementById('current-date-time').textContent = dateTimeString;
 }
 
 function greetUser() {
-    const userName = document.getElementById('userName').value;
-    const userMood = document.getElementById('userMood').value;
+    const userName = document.getElementById('user-name').value;
+    const userMood = document.getElementById('user-mood').value;
     
     const greeting = `The ${COMPANY_NAME} welcomes you, ${userName}!\nWe're glad you are doing ${userMood}!`;
-    document.getElementById('greetingOutput').textContent = greeting;
+    document.getElementById('greeting-output').textContent = greeting;
 }
 
 function getPolygonName() {
-    let number = Math.abs(parseFloat(document.getElementById('favoriteNumber').value));
+    let number = Math.abs(parseFloat(document.getElementById('favorite-number').value));
     number = Math.round(number);
     
     const polygons = {
