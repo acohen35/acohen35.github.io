@@ -136,3 +136,56 @@ footer p a:hover {
     height: 31px;
     object-fit: contain;
 }
+
+/* Adding Next 3 Mobile-Friendly Styles */
+/* Section Styles */
+section.highlighting * {
+    background-color: red;
+}
+
+section.centeredc * {
+    background-color: yellow;
+    text-align: center;
+}
+
+section.centerede * {
+    background-color: green;
+    color: #fff;
+    margin: auto;
+    max-width: 500px;
+    width: 95%;
+}
+
+/* Color Box */
+#colorbox {
+    height: 200px;
+    width: 200px;
+    background: blue;
+    margin: 50px auto;
+}
+
+/* Foundational Three */
+main, .maincontainer {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 981px) and (max-width: 1400px) {
+    #colorbox {
+        background-color: yellow;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 980px) {
+    #colorbox {
+        background-color: orange;
+    }
+}
+
+@media screen and (min-width: 370px) and (max-width: 600px) {
+    #colorbox {
+        background-color: red;
+    }
+}
