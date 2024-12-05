@@ -139,16 +139,16 @@ footer p a:hover {
 
 /* Adding Next 3 Mobile-Friendly Styles */
 /* Section Styles */
-section.highlighting *{
+.highlighting {
     background-color: red;
 }
 
-section.centeredc *{
+.centeredc {
     background-color: yellow;
     text-align: center;
 }
 
-section.centerede *{
+.centerede {
     background-color: green;
     color: #fff;
     margin: auto;
