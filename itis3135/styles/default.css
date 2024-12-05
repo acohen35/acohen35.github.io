@@ -186,6 +186,6 @@ main, .maincontainer {
 
 @media screen and (min-width: 370px) and (max-width: 600px) {
     #colorbox {
-        background-color: red;
+        background-color: green;
     }
 }
