@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A16C Technology Solutions</title>
+    <!-- Color Scheme from Coolors: https://coolors.co/8a9a5b-daa520-ffffff-333333 -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #8A9A5B;
+            color: #ffffff;
+            padding: 2rem;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background-color: transparent;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #ffffff;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h2 {
+            color: #8A9A5B;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .company-description {
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .features-list li {
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .features-list li::before {
+            content: "★";
+            position: absolute;
+            left: 0;
+            color: #DAA520;
+        }
+
+        .services-description {
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .contact-block {
+            background-color: #8A9A5B;
+            color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .contact-block h3 {
+            color: #DAA520;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        footer {
+            background-color: #8A9A5B;
+            color: #ffffff;
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .tagline {
+            color: #DAA520;
+            font-style: italic;
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        .copyright {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .validation-links {
+            margin-top: 1rem;
+        }
+
+        .validation-link {
+            margin: 0 5px;
+        }
+
+        .validation-image {
+            width: 31px;
+            height: 31px;
+        }
+    </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/a16cLogo.svg" alt="A16C Technology Solutions Logo - Modern geometric design" class="logo" width="80" height="80">
+            <h1>A16C Technology Solutions</h1>
+        </div>
+    </header>
+
+    <main>
+        <h2>A16C Technology Services</h2>
+        
+        <div class="company-description">
+            <p>A16C Technology Solutions is a cutting-edge technology consulting firm based in Charlotte, NC. We specialize in delivering innovative digital solutions that transform businesses for the modern age. Our team of expert consultants brings years of industry experience and technical expertise to every project, ensuring exceptional results that drive your business forward.</p>
+        </div>
+
+        <ul class="features-list">
+            <li>Comprehensive web development and design services</li>
+            <li>Custom software solutions tailored to your business needs</li>
+            <li>Cloud infrastructure and migration expertise</li>
+            <li>Advanced cybersecurity implementation</li>
+            <li>24/7 technical support and maintenance</li>
+            <li>Mobile application development</li>
+            <li>Data analytics and business intelligence solutions</li>
+            <li>Digital transformation consulting</li>
+        </ul>
+
+        <div class="services-description">
+            <p>At A16C Technology Solutions, we believe in creating lasting partnerships with our clients. Our approach combines innovative thinking with practical solutions, ensuring that every project we undertake adds real value to your organization. Whether you're looking to modernize your existing systems or build something entirely new, our team has the expertise to bring your vision to life.</p>
+        </div>
+
+        <div class="contact-block">
+            <h3>Get In Touch</h3>
+            <p>Email: contact@a16c.xyz</p>
+            <p>Phone: (980) 579-6170</p>
+            <p>Address: 9201 University City Blvd<br>Charlotte, NC 28223</p>
+        </div>
+    </main>
+
+    <footer>
+        <p class="tagline">Craft your vision with our help</p>
+        <p class="copyright">© 2024 A16C Technology Solutions</p>
+        <div class="validation-links">
+            <a href="https://validator.w3.org/check?uri=referer" id="validation-link-html" class="validation-link">
+                <img src="images/HTML5_Badge.svg" width="31" height="31" alt="Validate webpage HTML." class="validation-image">
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation-link-css" class="validation-link">
+                <img src="images/vcss.png" width="31" height="31" alt="Validate webpage CSS." class="validation-image">
+            </a>
+        </div>
+        <script>
+            document.getElementById("validation-link-html").setAttribute("href", 
+                "https://validator.w3.org/check?uri=" + location.href);
+            document.getElementById("validation-link-css").setAttribute("href", 
+                "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+        </script>
+    </footer>
+</body>
+</html>
